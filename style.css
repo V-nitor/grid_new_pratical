@@ -14,45 +14,37 @@ body {
 
 section{
      display: grid;
-     grid-template-columns: 33% 34% 33%;
-     grid-template-rows: 33% 34% 33%;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: 1fr 1fr 1fr;
+     grid-template-areas: 
+          "yel yel pur"
+          "rd map pur"
+          "rd orc orc";
      width: 95%;
      height: 35rem;
      border: solid rgb( 0, 0, 255) 1px;
      gap: 10px;
-     /* --- The paddings below allow to take the gap above into consideration --- */
-     padding-right: 25.5px;
-     padding-bottom: 25.5px;
 }
 
 div:nth-child(1) {
      background: yellow;
-     grid-column-start: 1;
-     grid-column-end: span 2;
-     grid-row-start: 1;
+     grid-area: yel;
 }
 div:nth-child(2) {
      background: purple;
-     grid-column-start: 3;
-     grid-row-start: 1;     
-     grid-row-end: span 2;
+     grid-area: pur;
 }
 #exercise-plan {
      width: 100%;
      height: 100%;
      padding: 0;
-     grid-column-start: 2;
-     grid-row-start: 2;
+     grid-area: map;
 }
 div:nth-child(4) {
      background: red;
-     grid-column-start: 1;
-     grid-row-start: 2;
-     grid-row-end: span 2;
+     grid-area: rd;
 }
 div:nth-child(5) {
      background: orchid;
-     grid-column-start: 2;
-     grid-column-end: span 2;
-     grid-row-start: 3;
+     grid-area: orc;
 }
